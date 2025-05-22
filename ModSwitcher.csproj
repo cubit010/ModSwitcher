@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<ApplicationIcon>ModSwitch.ico</ApplicationIcon>
+		<UseWindowsForms>true</UseWindowsForms>
+		<UseWPF>true</UseWPF>
+		
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Resource Include="ModSwitch.ico">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Resource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ApplicationDefinition Update="App.xaml">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </ApplicationDefinition>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Properties\Settings.settings">
+			<Generator>SettingsSingleFileGenerator</Generator>
+			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
+		<Compile Update="Properties\Settings.Designer.cs">
+			<AutoGen>true</AutoGen>
+			<DesignTimeSharedInput>true</DesignTimeSharedInput>
+			<DependentUpon>Settings.settings</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+</Project>
